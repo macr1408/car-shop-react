@@ -11,14 +11,19 @@ import ProductCard from '../components/Product/ProductCard/ProductCard.js';
 import Gap from '../components/Gap/Gap.js'
 import Title from '../components/Title/Title.js'
 
+import GolfImage from '../images/products/volkswagen-golf.jpg';
+import CayenneImage from '../images/products/porsche-cayenne.jpg';
+import Ferrari458Image from '../images/products/ferrari-458.jpg';
+import CivicImage from '../images/products/honda-civic.jpg';
+
 export default class Home extends Component {
     constructor(props) {
         super(props);
         this.products = [
-            { id: 1, name: 'Volkswagen Golf', brand: 'Volkswagen', price: 14200 },
-            { id: 2, name: 'Porsche Cayenne', brand: 'Porsche', price: 114000 },
-            { id: 3, name: 'Ferrari Italia 458', brand: 'Ferrari', price: 410000 },
-            { id: 4, name: 'Honda Civic', brand: 'Honda', price: 9000 }
+            { id: 1, name: 'Volkswagen Golf', brand: 'Volkswagen', price: 14200, image: GolfImage },
+            { id: 2, name: 'Porsche Cayenne', brand: 'Porsche', price: 114000, image: CayenneImage },
+            { id: 3, name: 'Ferrari Italia 458', brand: 'Ferrari', price: 410000, image: Ferrari458Image },
+            { id: 4, name: 'Honda Civic', brand: 'Honda', price: 9000, image: CivicImage }
         ];
     }
     render() {

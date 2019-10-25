@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.card-wrapper {
+.card-wrapper:not(.no-padding) {
     padding: 20px;
     background: #fff;
 

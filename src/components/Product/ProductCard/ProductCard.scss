@@ -1,5 +1,15 @@
 .product-wrapper {
 
+    .product-image {
+        width: 100%;
+        min-height: 200px;
+        object-fit: cover;
+    }
+
+    .product-description {
+        padding: 20px;
+    }
+
     .product-title,
     .product-price,
     .product-brand {
