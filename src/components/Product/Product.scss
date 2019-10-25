@@ -1,0 +1,23 @@
+.product-wrapper {
+
+    .product-title,
+    .product-price,
+    .product-brand {
+        display: block;
+    }
+
+    .product-brand {
+        font-weight: 700;
+        font-size: 80%;
+    }
+
+    .product-title {
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+    .product-price {
+        font-size: 120%;
+        color: #35d642;
+    }
+}

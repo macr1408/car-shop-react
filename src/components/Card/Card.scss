@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.card-wrapper {
+    padding: 20px;
+    background: #fff;
+
+    svg {
+        max-width: 200px;
+        fill: $primary-color;
+    }
+
+    .header {
+        display: block;
+        margin: 20px 0;
+        font-weight: 700;
+    }
+
+}

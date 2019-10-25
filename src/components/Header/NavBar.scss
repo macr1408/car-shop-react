@@ -1,0 +1,22 @@
+.nav-bar-wrapper {
+    background-color: #fff;
+
+    .nav-item {
+        padding: 10px 20px;
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    &.transparent {
+        background: #0000002e;
+        margin-bottom: -40px;
+        border-bottom: 1px solid #ffffff1f;
+        position: relative;
+
+        .nav-item {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
