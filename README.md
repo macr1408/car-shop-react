@@ -2,6 +2,7 @@ This is my first React App, it's supposed to be a "mini" e-store about cars
 
 ### General App
 - [x] Build a working app from zero, using docker, docker-compose, debian image, nginx, node, webpack, babel and react
+- [ ] Use Redux to simulate a tiny database
 - [ ] Make it available as a PWA
 
 ### Views
