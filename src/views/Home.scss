@@ -1,5 +1,7 @@
+@import '../styles/variables.scss';
+
 .card {
-    .suv-car {
+    .classic-car {
         svg {
             max-width: 162px;
         }
@@ -7,14 +9,20 @@
 
     .suv-car {
         svg {
-            max-width: 162px;
+            max-width: 132px;
         }
     }
 
     .sport-car {
         svg {
-            max-width: 223px;
+            max-width: 180px;
         }
     }
+}
 
+.newsletter-row {
+    background-color: $primary-color;
+    padding: 20px;
+    box-shadow: inset 0px 3px 2px 0 rgba(0, 0, 0, 0.16),
+        inset 0px -3px 2px 0 rgba(0, 0, 0, 0.16);
 }

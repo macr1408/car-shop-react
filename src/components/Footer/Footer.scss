@@ -1,0 +1,23 @@
+.footer-wrapper {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+
+    .nav-links a {
+        color: #fff;
+    }
+
+    .copyright-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .copyright {
+            text-align: right;
+            font-style: italic;
+            font-size: 80%;
+            color: #fff;
+            width: 100%;
+        }
+    }
+}

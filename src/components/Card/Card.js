@@ -4,7 +4,7 @@ import './Card.scss';
 
 export default class Card extends Component {
     render() {
-        const { textCenter, iconSrc, header, children, iconClass, customClasses } = this.props;
+        const { textCenter, iconSrc, header, children, iconClass, className } = this.props;
         let iconElem;
         if (iconSrc) {
             if (iconSrc.indexOf('<svg') !== -1) {
@@ -13,7 +13,7 @@ export default class Card extends Component {
                 iconElem = <img className={iconClass} src={iconSrc} />;
             }
         }
-        const cardClass = `card card-wrapper${(textCenter ? ' text-center' : '')} ${customClasses}`;
+        const cardClass = `card card-wrapper ${(textCenter ? 'text-center' : '')} ${className}`;
         return (
             <div className={cardClass}>
                 {iconSrc && iconElem}
@@ -30,8 +30,9 @@ Card.propTypes = {
     header: PropTypes.string,
     iconClass: PropTypes.string,
     roundedCorners: PropTypes.number,
-    customClasses: PropTypes.string,
+    className: PropTypes.string,
 };
 Card.defaultProps = {
-    textCenter: true
+    textCenter: true,
+    className: ''
 };

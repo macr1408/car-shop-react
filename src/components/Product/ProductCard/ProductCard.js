@@ -8,7 +8,7 @@ export default class ProductCard extends Component {
     render() {
         const { product } = this.props;
         return (
-            < Card textCenter={false} customClasses="product-wrapper no-padding" >
+            < Card textCenter={false} className="product-wrapper no-padding" >
                 {product.image && <img src={product.image} className="product-image" />}
                 <div className="product-description" >
                     {product.brand && <span className="product-brand">{product.brand}</span>}

@@ -8,8 +8,10 @@ import suvCar from '../images/home/suv-car.svg';
 import classicCar from '../images/home/classic-car.svg';
 import sportCar from '../images/home/sport-car.svg';
 import ProductCard from '../components/Product/ProductCard/ProductCard.js';
-import Gap from '../components/Gap/Gap.js'
-import Title from '../components/Title/Title.js'
+import Gap from '../components/Gap/Gap.js';
+import Title from '../components/Title/Title.js';
+import NewsletterForm from '../components/NewsletterForm/NewsletterForm.js';
+import Footer from '../components/Footer/Footer.js';
 
 import GolfImage from '../images/products/volkswagen-golf.jpg';
 import CayenneImage from '../images/products/porsche-cayenne.jpg';
@@ -61,6 +63,16 @@ export default class Home extends Component {
                             </div>);
                     })}
                 </div>
+                <Gap height="20px"></Gap>
+                <div className="row newsletter-row">
+                    <div className="container" style={{ padding: '20px 0' }}>
+                        <NewsletterForm>
+                            Don't miss our best deals, subscribe now to get the latest deals directly in your email
+                        </NewsletterForm>
+                    </div>
+                </div>
+                <Gap height="20px"></Gap>
+                <Footer></Footer>
             </div>
         );
     }
