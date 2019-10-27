@@ -4,7 +4,7 @@ import './Footer.scss';
 
 export default class Footer extends Component {
     render() {
-        const { className, children } = this.props;
+        const { className } = this.props;
         const footerClass = `footer-wrapper ${className}`;
         return (
             <div className={footerClass}>
@@ -26,10 +26,7 @@ export default class Footer extends Component {
 }
 
 Footer.propTypes = {
-    iconSrc: PropTypes.string,
-    header: PropTypes.string,
-    iconClass: PropTypes.string,
-    roundedCorners: PropTypes.number
+    className: PropTypes.string,
 };
 Footer.defaultProps = {
     className: ''

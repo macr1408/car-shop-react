@@ -38,6 +38,32 @@
             &:hover {
                 opacity: 1;
             }
+
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+
+    .subscribed-msg {
+        color: #fff;
+        font-weight: 500;
+        font-size: 100%;
+        border: 1px dashed #5f92d0;
+        padding: 15px;
+    }
+
+    .resubscribe-link-offer {
+        color: #fff;
+        font-weight: 500;
+        font-size: 70%;
+        margin-top: 30px;
+        cursor: pointer;
+
+        &:hover {
+            color: #daebff;
         }
     }
 

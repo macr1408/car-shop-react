@@ -13,7 +13,7 @@ This is my first React App, it's supposed to be a "mini" e-store about cars
 
 ### Functionality in views
 - [x] Home: Show recent products
-- [ ] Home: Fake Newsletter
+- [x] Home: Fake Newsletter
 - [ ] Home: Form to find the best car for me
 - [ ] Shop page: Sort products
 - [ ] Product detail: Being able to purchase a product
