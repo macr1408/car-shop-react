@@ -11,6 +11,7 @@ import ProductCard from '../components/Product/ProductCard/ProductCard.js';
 import Gap from '../components/Gap/Gap.js';
 import Title from '../components/Title/Title.js';
 import NewsletterForm from '../components/NewsletterForm/NewsletterForm.js';
+import FindMyCar from '../components/FindMyCar/FindMyCar.js';
 import Footer from '../components/Footer/Footer.js';
 
 import GolfImage from '../images/products/volkswagen-golf.jpg';
@@ -97,6 +98,9 @@ export default class Home extends Component {
                         </NewsletterForm>
                     </div>
                 </div>
+                <Gap height="20px"></Gap>
+                <div className="container"><Title>Find the right car for you</Title></div>
+                <FindMyCar></FindMyCar>
                 <Gap height="20px"></Gap>
                 <Footer></Footer>
             </div >

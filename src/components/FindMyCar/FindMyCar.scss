@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.findmycar-wrapper {
+
+    padding: 20px;
+
+    .step-wrapper {
+        padding: 10px;
+
+        .card-wrapper {
+            min-height: 120px;
+            transition: .1s all;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0px 0px 5px 0px $primary-color;
+            }
+        }
+
+    }
+
+    .bullet:before {
+        font-size: 32px;
+
+    }
+}

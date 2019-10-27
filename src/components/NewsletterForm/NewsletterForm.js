@@ -54,6 +54,7 @@ export default class NewsletterForm extends Component {
 
 NewsletterForm.propTypes = {
     emailHandler: PropTypes.func.isRequired,
+    reSubscribeHandler: PropTypes.func.isRequired,
     className: PropTypes.string,
 };
 NewsletterForm.defaultProps = {

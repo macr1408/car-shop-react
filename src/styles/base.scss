@@ -21,6 +21,16 @@ h6 {
     color: $text-color;
 }
 
+.bullet {
+    &.active {
+        color: $primary-color;
+    }
+
+    &:before {
+        content: "• ";
+    }
+}
+
 a {
     color: $text-color;
     text-decoration: none;
