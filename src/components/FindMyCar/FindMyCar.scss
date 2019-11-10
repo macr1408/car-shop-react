@@ -4,6 +4,18 @@
 
     padding: 20px;
 
+    .go-back-btn {
+        color: #fff;
+        border-color: #fff;
+        background-color: $primary-color;
+        padding: 5px 10px;
+        border: none;
+        margin: 10px;
+        font-weight: 700;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
     .step-wrapper {
         padding: 10px;
 
@@ -15,12 +27,31 @@
             &:hover {
                 box-shadow: 0px 0px 5px 0px $primary-color;
             }
+
+            &.active {
+                box-shadow: 0px 0px 5px 0px $primary-color;
+            }
+        }
+
+        .start-again-button {
+            background: none;
+            border: 2px solid $primary-color;
+            margin: 20px 0;
+            font-size: 18px;
+            padding: 10px 20px;
+            color: $primary-color;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+                border-color: #fff;
+                background-color: $primary-color;
+            }
         }
 
     }
 
     .bullet:before {
         font-size: 32px;
-
     }
 }
