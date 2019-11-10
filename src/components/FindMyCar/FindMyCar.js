@@ -6,6 +6,7 @@ import Step3 from './Steps/Step3';
 import Step4 from './Steps/Step4';
 import { connect } from 'react-redux';
 import './FindMyCar.scss';
+import Zoom from 'react-reveal/Zoom'
 
 class FindMyCar extends Component {
     constructor(props) {
@@ -114,7 +115,9 @@ class FindMyCar extends Component {
         return (
             <div className={findMyCarClass}>
                 <div className="col l12">
-                    {step}
+                    <Zoom>
+                        {step}
+                    </Zoom>
                     {this.state.currentStep !== 1 &&
                         <div className="text-center">
                             <button className="go-back-btn" onClick={this.goBackChoice}>Go back</button>
