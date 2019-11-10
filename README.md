@@ -7,13 +7,13 @@ This is my first React App, it's supposed to be a "mini" e-store about cars
 
 ### Views
 - [ ] Use React Router
-- [ ] Home
+- [x] Home
 - [ ] Shop page
 - [ ] Product detail
 
 ### Functionality in views
 - [x] Home: Show recent products
 - [x] Home: Fake Newsletter
-- [ ] Home: Form to find the best car for me
+- [x] Home: Form to find the best car for me
 - [ ] Shop page: Sort products
 - [ ] Product detail: Being able to purchase a product
