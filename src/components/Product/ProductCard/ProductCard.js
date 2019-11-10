@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Card from '../../Card/Card.js';
+import Card from '../../Card/Card';
 import './ProductCard.scss';
-import Helper from '../../../Helper.js';
+import Helper from '../../../Helper';
 
 export default class ProductCard extends Component {
     render() {

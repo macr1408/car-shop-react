@@ -1,33 +1,24 @@
 import React, { Component } from 'react';
 import './Home.scss';
-import NavBar from '../components/Header/NavBar.js';
-import Banner from '../components/Banner/Banner.js';
-import Card from '../components/Card/Card.js';
+import NavBar from '../components/Header/NavBar';
+import Banner from '../components/Banner/Banner';
+import Card from '../components/Card/Card';
 import Slider1 from '../images/home/slider-01.jpg';
 import suvCar from '../images/home/suv-car.svg';
 import classicCar from '../images/home/classic-car.svg';
 import sportCar from '../images/home/sport-car.svg';
-import ProductCard from '../components/Product/ProductCard/ProductCard.js';
-import Gap from '../components/Gap/Gap.js';
-import Title from '../components/Title/Title.js';
-import NewsletterForm from '../components/NewsletterForm/NewsletterForm.js';
-import FindMyCar from '../components/FindMyCar/FindMyCar.js';
-import Footer from '../components/Footer/Footer.js';
+import ProductCard from '../components/Product/ProductCard/ProductCard';
+import Gap from '../components/Gap/Gap';
+import Title from '../components/Title/Title';
+import NewsletterForm from '../components/NewsletterForm/NewsletterForm';
+import FindMyCar from '../components/FindMyCar/FindMyCar';
+import Footer from '../components/Footer/Footer';
+import { connect } from 'react-redux';
 
-import GolfImage from '../images/products/volkswagen-golf.jpg';
-import CayenneImage from '../images/products/porsche-cayenne.jpg';
-import Ferrari458Image from '../images/products/ferrari-458.jpg';
-import CivicImage from '../images/products/honda-civic.jpg';
-
-export default class Home extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
-        this.products = [
-            { id: 1, slug: 'volkswagen-golf', name: 'Volkswagen Golf', brand: 'Volkswagen', price: 14200, image: GolfImage },
-            { id: 2, slug: 'porsche-cayenne', name: 'Porsche Cayenne', brand: 'Porsche', price: 114000, image: CayenneImage },
-            { id: 3, slug: 'ferrari-italia', name: 'Ferrari Italia 458', brand: 'Ferrari', price: 410000, image: Ferrari458Image },
-            { id: 4, slug: 'honda-civic', name: 'Honda Civic', brand: 'Honda', price: 9000, image: CivicImage }
-        ];
+        this.products = props.products;
         this.state = {
             isSubscribedToNewsletter: false,
             emailsSubscribed: []
@@ -107,3 +98,11 @@ export default class Home extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        products: state.cars
+    }
+}
+
+export default connect(mapStateToProps)(Home);

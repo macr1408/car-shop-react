@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Step1 from './Steps/Step1.js';
-import Step2 from './Steps/Step2.js';
-import Step3 from './Steps/Step3.js';
-import Step4 from './Steps/Step4.js';
+import Step1 from './Steps/Step1';
+import Step2 from './Steps/Step2';
+import Step3 from './Steps/Step3';
+import Step4 from './Steps/Step4';
+import { connect } from 'react-redux';
 import './FindMyCar.scss';
 
-export default class FindMyCar extends Component {
+class FindMyCar extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -95,7 +96,7 @@ export default class FindMyCar extends Component {
             'any-family-plus-silver': 'honda-civic',
             'any-family-plus-gold': 'porsche-cayenne'
         };
-        return cars[key];
+        return this.props.cars.find((value, index) => value.slug === cars[key]);
     }
 
     render() {
@@ -112,8 +113,7 @@ export default class FindMyCar extends Component {
         }
         return (
             <div className={findMyCarClass}>
-                <div className="col l4 sidebar"></div>
-                <div className="col l8">
+                <div className="col l12">
                     {step}
                     {this.state.currentStep !== 1 &&
                         <div className="text-center">
@@ -139,3 +139,11 @@ FindMyCar.propTypes = {
 FindMyCar.defaultProps = {
     className: ''
 }
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        cars: state.cars
+    };
+}
+
+export default connect(mapStateToProps)(FindMyCar);

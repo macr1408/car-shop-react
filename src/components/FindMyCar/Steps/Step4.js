@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ProductCard from '../../Product/ProductCard/ProductCard.js';
+import ProductCard from '../../Product/ProductCard/ProductCard';
 
 export default class Step4 extends Component {
     render() {
@@ -9,11 +9,13 @@ export default class Step4 extends Component {
         return (
             <div className={step4Class}>
                 <div className="row container spaced-medium">
-                    <div className="col l12 text-center">
+                    <div className="col l3"></div>
+                    <div className="col l6 text-center">
                         <h2>The best car for you is: </h2>
-                        <ProductCard header={result}></ProductCard>
+                        <ProductCard header={result} product={result}></ProductCard>
                         <button className="start-again-button" onClick={resetHandler}>Start again</button>
                     </div>
+                    <div className="col l3"></div>
                 </div>
             </div >
         );

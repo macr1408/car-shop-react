@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Card from '../../Card/Card.js';
+import Card from '../../Card/Card';
 
 export default class Step1 extends Component {
     render() {
