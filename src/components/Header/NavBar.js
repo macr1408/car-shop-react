@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './NavBar.scss';
+import { Link, NavLink } from 'react-router-dom';
 
 export default class NavBar extends Component {
     render() {
         const { isTransparent } = this.props;
-        const navWrapperClass = `nav-bar-wrapper ${(isTransparent ? 'transparent' : '')}`;
+        const navWrapperClass = `nav-bar-wrapper ${(isTransparent ? 'transparent' : 'blue')}`;
         return (
             <div className={navWrapperClass}>
                 <div className="row nav-bar container">
@@ -13,10 +14,8 @@ export default class NavBar extends Component {
                         <img src="logo" />
                     </div>
                     <div className="col l6">
-                        <div className="nav-item"><a href="#">Models</a></div>
-                        <div className="nav-item"><a href="#">Shop</a></div>
-                        <div className="nav-item"><a href="#">About us</a></div>
-                        <div className="nav-item"><a href="#">Contact</a></div>
+                        <div className="nav-item"><Link to="/">Home</Link></div>
+                        <div className="nav-item"><NavLink to="/shop">Shop</NavLink></div>
                     </div>
                 </div >
             </div>

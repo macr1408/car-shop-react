@@ -43,6 +43,7 @@ class Home extends Component {
     }
 
     render() {
+        const { bestSellingProducts } = this.props;
         return (
             <div className="home">
                 <NavBar isTransparent={true} />
@@ -70,7 +71,7 @@ class Home extends Component {
                 <Gap height="50px"></Gap>
                 <div className="container"><Title>Best Selling Cars</Title></div>
                 <div className="row container spaced-large">
-                    {this.products.map((product, index) => {
+                    {bestSellingProducts.map((product, index) => {
                         return (
                             <div className="col l3" key={index}>
                                 <ProductCard product={product} ></ProductCard>
@@ -101,7 +102,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        products: state.cars
+        products: state.cars,
+        bestSellingProducts: state.cars.slice(0, 4)
     }
 }
 

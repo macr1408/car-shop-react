@@ -6,10 +6,10 @@ This is my first React App, it's supposed to be a "mini" e-store about cars
 - [ ] Make it available as a PWA
 
 ### Views
-- [ ] Use React Router
+- [x] Use React Router
 - [x] Home
-- [ ] Shop page
-- [ ] Product detail
+- [x] Shop page
+- [x] Product detail
 
 ### Functionality in views
 - [x] Home: Show recent products
