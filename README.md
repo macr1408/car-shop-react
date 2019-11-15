@@ -21,3 +21,9 @@ When I built this app I used a "light" custom css framework, turned out this fra
 - [x] Home: Form to find the best car for me
 - [x] Shop page: Sort products
 - [x] Product detail: Being able to purchase a product
+
+# Build instructions
+
+- Clone repo
+- npm install
+- npm start
