@@ -1,4 +1,5 @@
 const path = require('path');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: './src/App.js',
@@ -45,7 +46,12 @@ module.exports = {
                 test: /\.(png|jpg|gif)$/,
                 include: path.resolve(__dirname, 'src/images'),
                 use: [
-                    'file-loader',
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'assets/[name].[ext]',
+                        }
+                    }
                 ],
             },
             {
@@ -53,5 +59,12 @@ module.exports = {
                 loader: 'svg-inline-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new WorkboxPlugin.GenerateSW({
+            swDest: 'serviceWorker.js',
+            clientsClaim: true,
+            skipWaiting: true
+        })
+    ]
 };

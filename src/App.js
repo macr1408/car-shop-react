@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Error404 from './views/Error404';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -24,3 +25,5 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('root')
 );
+
+serviceWorker.register();
