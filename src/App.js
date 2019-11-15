@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Home from './views/Home';
 import Product from './views/Product';
 import Shop from './views/Shop';
+import Cart from './views/Cart';
 import './styles/base.scss';
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -16,6 +17,7 @@ ReactDOM.render(
                 <Route exact path="/" component={Home}></Route>
                 <Route path="/shop" component={Shop}></Route>
                 <Route path="/car/:car_slug" component={Product}></Route>
+                <Route path="/cart" component={Cart}></Route>
                 <Route path="*" component={Error404}></Route>
             </Switch>
         </Provider>

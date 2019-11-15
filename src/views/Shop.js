@@ -14,7 +14,7 @@ class Shop extends Component {
         this.state = {
             sortedProducts: this.props.products.concat()
         }
-        this.props.history.listen((location, action) => {
+        this.historyUnlisten = this.props.history.listen((location, action) => {
             this.checkProductsSort(location);
         });
     }
@@ -29,6 +29,10 @@ class Shop extends Component {
 
     componentDidMount() {
         this.checkProductsSort(this.props.location);
+    }
+
+    componentWillUnmount() {
+        this.historyUnlisten();
     }
 
     checkProductsSort(location) {
@@ -67,7 +71,6 @@ class Shop extends Component {
         let printableProducts = [];
         const productsLength = products.length;
         for (let i = 0; i < productsLength - 4; i = i + 4) {
-
             printableProducts.push(
                 <div className="row" style={{ marginBottom: '20px' }} key={i}>
                     <div className="col l3 s12">

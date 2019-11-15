@@ -3,10 +3,26 @@
 .nav-bar-wrapper {
     background-color: #fff;
 
+    .logo {
+        max-width: 80px;
+    }
+
     .nav-item {
-        padding: 10px 20px;
         display: inline-block;
         font-weight: 700;
+
+        a {
+            padding: 10px 20px;
+            display: inline-block;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .active {
+            background: #4aab52;
+        }
     }
 
     &.transparent {

@@ -16,4 +16,4 @@ This is my first React App, it's supposed to be a "mini" e-store about cars
 - [x] Home: Fake Newsletter
 - [x] Home: Form to find the best car for me
 - [x] Shop page: Sort products
-- [ ] Product detail: Being able to purchase a product
+- [x] Product detail: Being able to purchase a product

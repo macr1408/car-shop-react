@@ -11,7 +11,7 @@ export default class Step4 extends Component {
                 <div className="row container spaced-medium">
                     <div className="col l3"></div>
                     <div className="col l6 text-center">
-                        <h2>The best car for you is: </h2>
+                        <h2>The best car for you is </h2>
                         <ProductCard header={result} product={result}></ProductCard>
                         <button className="start-again-button" onClick={resetHandler}>Start again</button>
                     </div>

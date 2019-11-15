@@ -14,10 +14,33 @@ const initState = {
         { id: 7, slug: 'honda-civic4', name: 'Honda Civic master clone', brand: 'Honda', price: 9000, stock: 3, image: CivicImage },
         { id: 8, slug: 'honda-civic5', name: 'Honda Civic best clone', brand: 'Honda', price: 9000, stock: 3, image: CivicImage },
         { id: 9, slug: 'honda-civic6', name: 'Honda Civic supreme clone', brand: 'Honda', price: 9000, stock: 3, image: CivicImage }
-    ]
+    ],
+    cart: []
 }
 
 const mainReducer = (state = initState, action) => {
+    if (action.type === 'ADD_TO_CART') {
+        let newState = state.cart.concat();
+        newState.push(state.cars.find((elem) => elem.id === action.payload));
+        return {
+            ...state,
+            cart: newState
+        }
+    } else if (action.type === 'REDUCE_STOCK') {
+        const newState = state.cars.map((value, index) => {
+            if (value.id === action.payload) {
+                return {
+                    ...value,
+                    stock: value.stock - 1
+                }
+            }
+            return value;
+        });
+        return {
+            ...state,
+            cars: newState
+        };
+    }
     return state;
 }
 
